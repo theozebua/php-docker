@@ -1,0 +1,50 @@
+version: '3.8'
+
+name: web
+
+networks:
+  web:
+
+services:
+  app:
+    image: theozebua27/php:${PHP_VERSION}
+    container_name: app
+    networks:
+      - web
+    ports:
+      - 8000:8000
+      - 8080:80
+    volumes:
+      - ./src:/home/me/application
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:latest
+    container_name: app-db
+    restart: unless-stopped
+    tty: true
+    networks:
+      - web
+    ports:
+      - 3307:3306
+    volumes:
+      - ./db:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: app
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: app-pma
+    restart: unless-stopped
+    networks:
+      - web
+    ports:
+      - 8001:80
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD:
+    depends_on:
+      - mysql
