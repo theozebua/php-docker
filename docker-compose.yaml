@@ -20,7 +20,7 @@ services:
       - mysql
 
   mysql:
-    image: mysql:latest
+    image: mysql:${MYSQL_VERSION}
     container_name: app-db
     restart: unless-stopped
     tty: true
@@ -31,11 +31,11 @@ services:
     volumes:
       - ./db:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: app
+      MYSQL_DATABASE: ${DB_NAME}
       MYSQL_ALLOW_EMPTY_PASSWORD: yes
 
   phpmyadmin:
-    image: phpmyadmin:latest
+    image: phpmyadmin:${PMA_VERSION}
     container_name: app-pma
     restart: unless-stopped
     networks:
