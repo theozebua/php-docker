@@ -84,11 +84,11 @@ Or if you prefer not to use a framework, you can do that as well.
 sudo docker exec -it app bash
 ```
 
-> Note: If you run a development server such with `php -S <host>:<port> -t public`, `artisan` or any other console command that serve the application, make sure you set the host to `0.0.0.0` so it can be accessible from outside the container.
+> Note: If you run a development server with `php -S <host>:<port> -t public`, `php artisan serve` or any other console command that serve the application, make sure you set the host to `0.0.0.0` so it can be accessible from outside the container.
 
 ## Using Apache Web Server
 
-If you want to use apache web server to serve your application, you can do that simply by creating a symlink from your application entrypoint to the web server entrypoint. By default, the web server endpoint is in the `/var/www/html` directory.
+If you want to use apache web server to serve your application, you can do that simply by creating a symlink from your application entrypoint to the web server entrypoint. By default, the web server entrypoint is in the `/var/www/html` directory.
 
 **Example (Laravel)**
 
