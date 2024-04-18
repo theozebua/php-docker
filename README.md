@@ -8,12 +8,12 @@ This docker environment comes with:
 - ✅ Composer (latest)
 - ✅ Apache (latest)
 - ✅ MySQL (latest)
+- ✅ SQLite (3)
 - ✅ phpMyAdmin (latest)
 
 Soon:
 
 - 🕔 Git
-- 🕔 SQLite
 - 🕔 MariaDB
 - 🕔 PostgreSQL
 - 🕔 SQL Server
