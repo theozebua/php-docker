@@ -26,6 +26,8 @@ Soon:
 - Copy `.env.example` to `.env`
 - Select your `PHP_VERSION` in `.env`. Available versions: `8.1`, `8.2` and `8.3`.
 
+Or because this is a public template, you can just use this template to create a repository.
+
 ## Running The Docker Environment
 
 In this docker environment, we will use docker compose to run our services at once.
