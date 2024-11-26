@@ -44,6 +44,10 @@ sudo docker-compose up -d
 # depends on your docker compose version
 ```
 
+> [!IMPORTANT]
+> Before you do anything, there is a file permission problem #7
+> So you have to run `sudo docker compose run --rm app bash -c "sudo chown -R \$(whoami): /home/\$(whoami)/application"` first.
+
 Then smash the `enter` button, and you are ready to go.
 
 ## Project Installation
