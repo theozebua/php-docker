@@ -2,6 +2,7 @@ name: web
 
 networks:
   web:
+    name: web
 
 services:
   app:
