@@ -45,8 +45,8 @@ sudo docker-compose up -d
 ```
 
 > [!IMPORTANT]
-> Before you do anything, there is a file permission problem https://github.com/theozebua/php-docker/issues/7
-> So you have to run `sudo docker compose run --rm app bash -c "sudo chown -R \$(whoami): /home/\$(whoami)/application"` first.
+> If you encounter permission problem as described in pull request number <https://github.com/theozebua/php-docker/issues/7>
+> you have to run `sudo docker compose run --rm app bash -c "sudo chown -R \$(whoami): /home/\$(whoami)/application"` first.
 
 Then smash the `enter` button, and you are ready to go.
 
